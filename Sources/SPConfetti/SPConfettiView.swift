@@ -228,7 +228,8 @@ open class SPConfettiView: UIView {
             cell.emissionLongitude = degressToRadians(270)
             cell.emissionRange = degressToRadians(45)
         }
-        var image = particle.image.resize(newWidth: particleWidth)
+        var image = particle.image
+        cell.scale = 0.5 
         if particlesConfig.colored {
             image = image.colored(color)
             cell.color = color.cgColor
